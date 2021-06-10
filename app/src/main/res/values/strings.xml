@@ -16,4 +16,6 @@
     <string name="point">,</string>
     <string name="plus">+</string>
     <string name="result">=</string>
+    <string name="Calculator30">Theme Purple_500</string>
+    <string name="BottomSheetDialog">Theme Red</string>
 </resources>

@@ -1,175 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding">
+    android:orientation="vertical"
+    android:background="@mipmap/ic_launcher_foreground">
     <!-- поле результата -->
     <TextView
         android:id="@+id/resultField"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="3"
-        android:textSize="@dimen/textSize"
         android:gravity="end"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        app:layout_constraintHorizontal_weight="3"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/operationField"/>
+        app:layout_constraintRight_toLeftOf="@+id/operationField"
+        app:layout_constraintTop_toTopOf="parent" />
     <!-- поле знака операции -->
     <TextView
         android:id="@+id/operationField"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="1"
-        android:textSize="@dimen/textSize"
         android:gravity="end"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toRightOf="@+id/resultField"
-        />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <!-- поле ввода чисел -->
     <EditText
         android:id="@+id/numberField"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="phone"
         android:gravity="end"
-        app:layout_constraintTop_toBottomOf="@+id/resultField"
+        android:inputType="phone"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultField" />
 
     <LinearLayout
         android:id="@+id/firstButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
-        app:layout_constraintTop_toBottomOf="@+id/numberField"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberField">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_7"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_7" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_8"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_8" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_9"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_9" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/division"
-            android:onClick="onOperationClick"/>
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="@string/division" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/secondButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
-        app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_4"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_4" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_5"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_5" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_6"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_6" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/multiply"
-            android:onClick="onOperationClick"/>
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="@string/multiply" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/thirdButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
-        app:layout_constraintTop_toBottomOf="@+id/secondButtonPanel"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondButtonPanel">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_1"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_1" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_2"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_2" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_3"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_3" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/minus"
-            android:onClick="onOperationClick"/>
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="@string/minus" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/forthButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
-        app:layout_constraintTop_toBottomOf="@+id/thirdButtonPanel"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdButtonPanel">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/_0"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/_0" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/point"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="@string/point" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/plus"
-            android:onClick="onOperationClick"/>
-        <Button
             android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="@string/plus" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/result"
-            android:onClick="onOperationClick"/>
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="@string/result" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forthButtonPanel">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onThemesCalculatorClick"
+            android:text="@string/Calculator30" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onThemesBottomSheetDialogClick"
+            android:text="@string/BottomSheetDialog" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize">18sp</dimen>
+    <dimen name="textSize">40sp</dimen>
     <dimen name="marginTop">16dp</dimen>
     <dimen name="padding">8dp</dimen>
 </resources>
